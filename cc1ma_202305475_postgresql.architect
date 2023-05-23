@@ -55,8 +55,8 @@ Lista os emails, nomes e telefones de cada cliente, juntamente com o id próprio
     <column id="COL13" populated="true" UUID="12251aaf-6a5c-4718-a7e3-e70293cd50bf" autoIncrement="false" autoIncrementSequenceName="envios_loja_id_seq" defaultValue="" name="loja_id" nullable="0" physicalName="loja_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;loja_id&quot;, que é a PK da tabela &quot;lojas&quot;.</remarks>
     </column>
-    <column id="COL14" populated="true" UUID="01762669-8b2a-41eb-b8d5-a9b170de5189" autoIncrement="false" autoIncrementSequenceName="envios_endereço_entrega_seq" defaultValue="" name="endereço_entrega" nullable="0" physicalName="endereço_entrega" precision="512" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks>Cria a tabela &quot;endereço_entrega&quot;, que não pode ter valor &quot;null&quot;.</remarks>
+    <column id="COL14" populated="true" UUID="01762669-8b2a-41eb-b8d5-a9b170de5189" autoIncrement="false" autoIncrementSequenceName="envios_endereco_entrega_seq" defaultValue="" name="endereco_entrega" nullable="0" physicalName="endereco_entrega" precision="512" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Cria a tabela &quot;endereco_entrega&quot;, que não pode ter valor &quot;null&quot;.</remarks>
     </column>
     <column id="COL15" populated="true" UUID="6d26f39d-2fbb-4610-8b0f-4e45907a2e31" autoIncrement="false" autoIncrementSequenceName="envios_status_seq" defaultValue="" name="status" nullable="0" physicalName="status" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Cria a coluna &quot;status&quot;, que não pode te o valor &quot;null&quot;.</remarks>
@@ -126,10 +126,10 @@ Lista os pedidos feitos, a hora de cada um, a id do cliente que fez o pedido e o
     <column id="COL33" populated="true" UUID="d4ccf665-050e-4225-85a7-df4f69e7c1e0" autoIncrement="false" autoIncrementSequenceName="pedidos_pedido_id_seq" defaultValue="" name="pedido_id" nullable="0" physicalName="pedido_id" precision="38" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;pedido_id&quot;, que é a PK, da tabela &quot;pedidos&quot;.</remarks>
     </column>
-    <column id="COL34" populated="true" UUID="0e16d481-6f6d-445b-afc1-fab398be07f1" autoIncrement="false" autoIncrementSequenceName="clientes_cliente_id_seq" defaultValue="" name="cliente_id" nullable="0" physicalName="cliente_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL34" populated="true" UUID="0e16d481-6f6d-445b-afc1-fab398be07f1" autoIncrement="false" autoIncrementSequenceName="clientes_cliente_id_seq_1" defaultValue="" name="cliente_id" nullable="0" physicalName="cliente_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;cliente_id&quot;, que é a PK da tabela &quot;clientes&quot;.</remarks>
     </column>
-    <column id="COL35" populated="true" UUID="b55c8e86-3625-44a4-aa67-5411cdd2b185" autoIncrement="false" autoIncrementSequenceName="lojas_loja_id_seq" defaultValue="" name="loja_id" nullable="0" physicalName="loja_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL35" populated="true" UUID="b55c8e86-3625-44a4-aa67-5411cdd2b185" autoIncrement="false" autoIncrementSequenceName="lojas_loja_id_seq_1" defaultValue="" name="loja_id" nullable="0" physicalName="loja_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;loja_id&quot;, que é a PK da tabela &quot;lojas&quot;.</remarks>
     </column>
     <column id="COL36" populated="true" UUID="fae3d49d-d3b1-4b9d-9bbd-2e63effde8b1" autoIncrement="false" autoIncrementSequenceName="pedidos_data_hora_seq" defaultValue="" name="data_hora" nullable="0" physicalName="data_hora" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
@@ -198,10 +198,10 @@ Lista o id de cada produto no estoque, id de cada loja que tem produtos em estoq
     <column id="COL53" populated="true" UUID="255771cf-57b0-46f0-aa62-f63050df64a2" autoIncrement="false" autoIncrementSequenceName="estoques_estoque_id_seq" defaultValue="" name="estoque_id" nullable="0" physicalName="estoque_id" precision="38" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;estoque_id&quot;, que é a PK da tabela &quot;estoques&quot;.</remarks>
     </column>
-    <column id="COL54" populated="true" UUID="d4d94c84-f4ea-4c40-b5ed-99a457576f1a" autoIncrement="false" autoIncrementSequenceName="lojas_loja_id_seq" defaultValue="" name="loja_id" nullable="0" physicalName="loja_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL54" populated="true" UUID="d4d94c84-f4ea-4c40-b5ed-99a457576f1a" autoIncrement="false" autoIncrementSequenceName="lojas_loja_id_seq_2" defaultValue="" name="loja_id" nullable="0" physicalName="loja_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;loja_id&quot;, que é a PK da tabela &quot;lojas&quot;.</remarks>
     </column>
-    <column id="COL55" populated="true" UUID="677cdd0e-c3cd-4a39-b984-f095dff00293" autoIncrement="false" autoIncrementSequenceName="produtos_produto_id_seq" defaultValue="" name="produto_id" nullable="0" physicalName="produto_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL55" populated="true" UUID="677cdd0e-c3cd-4a39-b984-f095dff00293" autoIncrement="false" autoIncrementSequenceName="produtos_produto_id_seq_1" defaultValue="" name="produto_id" nullable="0" physicalName="produto_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;produto_id&quot;, que é a PK da tabela &quot;produtos&quot;.</remarks>
     </column>
     <column id="COL56" populated="true" UUID="c57138db-30c2-4b2e-833b-01bf4b05f2db" autoIncrement="false" autoIncrementSequenceName="estoques_quantidade_seq" defaultValue="" name="quantidade" nullable="0" physicalName="quantidade" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
@@ -223,13 +223,13 @@ Lista o id de cada produto no estoque, id de cada loja que tem produtos em estoq
 Essa tabela tem um relacionamento identificado com a tabela &quot;pedidos&quot; e &quot;produtos&quot;.
 Lista o id de cada produto no estoque, id de cada pedido, a quantidade, o numero da linha e o id do envio.</remarks>
    <folder id="FOLTAB591" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL60" populated="true" UUID="4f902066-d73e-41a4-ad69-d49f87d4b48d" autoIncrement="false" autoIncrementSequenceName="pedidos_pedido_id_seq" defaultValue="" name="pedido_id" nullable="0" physicalName="pedido_id" precision="38" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL60" populated="true" UUID="4f902066-d73e-41a4-ad69-d49f87d4b48d" autoIncrement="false" autoIncrementSequenceName="pedidos_pedido_id_seq_1" defaultValue="" name="pedido_id" nullable="0" physicalName="pedido_id" precision="38" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;pedido_id&quot;, que é a PK, da tabela &quot;pedidos&quot;.</remarks>
     </column>
-    <column id="COL61" populated="true" UUID="1cebddf3-dc7d-4012-ba39-075b07b524a6" autoIncrement="false" autoIncrementSequenceName="produtos_produto_id_seq" defaultValue="" name="produto_id" nullable="0" physicalName="produto_id" precision="38" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL61" populated="true" UUID="1cebddf3-dc7d-4012-ba39-075b07b524a6" autoIncrement="false" autoIncrementSequenceName="produtos_produto_id_seq_2" defaultValue="" name="produto_id" nullable="0" physicalName="produto_id" precision="38" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;produto_id&quot;, que é a PK da tabela &quot;produtos&quot;.</remarks>
     </column>
-    <column id="COL62" populated="true" UUID="ee25afa4-4089-4a03-aa53-607103245aac" autoIncrement="false" autoIncrementSequenceName="envios_envio_id_seq" defaultValue="" name="envio_id" nullable="0" physicalName="envio_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+    <column id="COL62" populated="true" UUID="ee25afa4-4089-4a03-aa53-607103245aac" autoIncrement="false" autoIncrementSequenceName="envios_envio_id_seq_1" defaultValue="" name="envio_id" nullable="0" physicalName="envio_id" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
      <remarks>Cria a coluna &quot;envio_id&quot;, que é a PK.</remarks>
     </column>
     <column id="COL63" populated="true" UUID="8a9c47d7-d6ef-4e04-8289-e498e079f774" autoIncrement="false" autoIncrementSequenceName="pedidos_itens_numero_da_linha_seq" defaultValue="" name="numero_da_linha" nullable="0" physicalName="numero_da_linha" precision="38" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
@@ -247,7 +247,7 @@ Lista o id de cada produto no estoque, id de cada pedido, a quantidade, o numero
     <folder id="FOLTAB592" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB594" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX66" populated="true" UUID="f7d3f139-ebb8-4431-9837-f030292a3f16" clustered="false" name="pedido_id e produto_id" physicalName="pedido_id e produto_id" primaryKeyIndex="true" unique="false" >
+    <index id="IDX66" populated="true" UUID="f7d3f139-ebb8-4431-9837-f030292a3f16" clustered="false" name="pedido_id e produto_id" physicalName="pedido_id_e_produto_id" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC67" populated="true" UUID="774bc19e-ce06-430a-952e-2a0d2845aaf8" ascendingOrDescending="UNSPECIFIED" column-ref="COL60" name="pedido_id" physicalName="pedido_id" />
      <index-column id="IDC68" populated="true" UUID="80e74805-b072-40a3-baf6-c6211b4ffed2" ascendingOrDescending="UNSPECIFIED" column-ref="COL61" name="produto_id" physicalName="produto_id" />
     </index>
@@ -283,7 +283,7 @@ Lista o id de cada produto no estoque, id de cada pedido, a quantidade, o numero
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="32" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
