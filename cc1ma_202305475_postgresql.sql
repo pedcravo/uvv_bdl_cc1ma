@@ -22,12 +22,12 @@ CREATE DATABASE uvv
 -- Criação do schema lojas
 CREATE SCHEMA lojas;
 
--- Definindo o caminho de pesquisa padrão para o usuário Pedro_Cravo
+-- Define o caminho de pesquisa padrão para o usuário Pedro_Cravo
 ALTER USER Pedro_Cravo
 SET SEARCH_PATH TO lojas, $user, public;
 
 
--- Criando a tabelas produtos
+-- Criação da tabelas produtos
 CREATE TABLE lojas.produtos (
     produto_id NUMERIC(38) NOT NULL,
     nome VARCHAR(255) NOT NULL,
@@ -54,7 +54,7 @@ COMMENT ON COLUMN lojas.produtos.imagem_arquivo IS 'Cria a coluna "imagem_arquiv
 COMMENT ON COLUMN lojas.produtos.imagem_charset IS 'Cria a coluna "imagem_charset" dentro da tabela "produtos".';
 COMMENT ON COLUMN lojas.produtos.imagem_ultima_atualizacao IS 'Cria a coluna "imagem_ultima_atualizacao" dentro da tabela "produtos".';
 
--- Criando a tabela lojas
+-- Criação da tabela lojas
 CREATE TABLE lojas.lojas (
     loja_id NUMERIC(38) NOT NULL,
     nome VARCHAR(255) NOT NULL,
@@ -84,7 +84,7 @@ COMMENT ON COLUMN lojas.lojas.logo_arquivo IS 'Cria a coluna "logo_arquivo" dent
 COMMENT ON COLUMN lojas.lojas.logo_charset IS 'Cria a coluna "logo_charset" dentro da tabela "lojas".';
 COMMENT ON COLUMN lojas.lojas.logo_ultima_atualizacao IS 'Cria a coluna "logo_ultima_atualizacao" dentro da tabela "lojas".';
 
--- Criando a tabela estoques
+-- Criação da tabela estoques
 CREATE TABLE lojas.estoques (
                 estoque_id NUMERIC(38) NOT NULL,
                 loja_id NUMERIC(38) NOT NULL,
@@ -101,7 +101,7 @@ COMMENT ON COLUMN lojas.estoques.loja_id IS 'Cria a coluna "loja_id", que é a P
 COMMENT ON COLUMN lojas.estoques.produto_id IS 'Cria a coluna "produto_id", que é a PK da tabela "produtos".';
 COMMENT ON COLUMN lojas.estoques.quantidade IS 'Cria a coluna "quantidade" dentro da tabela "estoques".';
 
--- Criando a tabela clientes
+-- Criação da tabela clientes
 CREATE TABLE lojas.clientes (
                 cliente_id NUMERIC(38) NOT NULL,
                 email VARCHAR(255) NOT NULL,
@@ -122,7 +122,7 @@ COMMENT ON COLUMN lojas.clientes.telefone1 IS 'Cria  a  tabela "telefone1", não
 COMMENT ON COLUMN lojas.clientes.telefone3 IS 'Cria  a  tabela "telefone3", não é uma tabela de preenchimento obrigatório.';
 COMMENT ON COLUMN lojas.clientes.telefone2 IS 'Cria  a  tabela "telefone2", não é uma tabela de preenchimento obrigatório.';
 
--- Criando a tabela pedidos
+-- Criação da tabela pedidos
 CREATE TABLE lojas.pedidos (
                 pedido_id NUMERIC(38) NOT NULL,
                 cliente_id NUMERIC(38) NOT NULL,
@@ -141,7 +141,7 @@ COMMENT ON COLUMN lojas.pedidos.loja_id IS 'Cria a coluna "loja_id", que é a PK
 COMMENT ON COLUMN lojas.pedidos.data_hora IS 'Cria a coluna "data_hora" dentro da tabela "pedidos".';
 COMMENT ON COLUMN lojas.pedidos.status IS 'Cria a coluna "status" dentro da tabela "pedidos".';
 
--- Criando a tabela envios
+-- Criação da tabela envios
 CREATE TABLE lojas.envios (
                 envio_id NUMERIC(38) NOT NULL,
                 cliente_id NUMERIC(38) NOT NULL,
@@ -159,7 +159,7 @@ COMMENT ON COLUMN lojas.envios.loja_id IS 'Cria a coluna "loja_id", que é a PK 
 COMMENT ON COLUMN lojas.envios.endereco_entrega IS 'Cria a tabela "endereco_entrega", que não pode ter valor "null".';
 COMMENT ON COLUMN lojas.envios.status IS 'Cria a coluna "status", que não pode ter o valor "null".'; 
 
--- Criando a tabela pedidos_itens
+-- Criação da tabela pedidos_itens
 CREATE TABLE lojas.pedidos_itens (
                 pedido_id NUMERIC(38) NOT NULL,
                 produto_id NUMERIC(38) NOT NULL,
@@ -182,7 +182,7 @@ COMMENT ON COLUMN lojas.pedidos_itens.preco_unitario IS 'Cria a coluna "preco_un
 COMMENT ON COLUMN lojas.pedidos_itens.quantidade IS 'Cria a coluna "quantidade" dentro da tabela "pedidos_itens".';
 
 
--- Criando relacionamento com a FK produto_id em estoques
+-- Criação do relacionamento com a FK produto_id em estoques
 ALTER TABLE lojas.estoques ADD CONSTRAINT produtos_estoques_fk
 FOREIGN KEY (produto_id)
 REFERENCES lojas.produtos (produto_id)
@@ -190,7 +190,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK produto_id em pedidos_itens
+-- Criação do relacionamento com a FK produto_id em pedidos_itens
 ALTER TABLE lojas.pedidos_itens ADD CONSTRAINT produtos_pedidos_itens_fk
 FOREIGN KEY (produto_id)
 REFERENCES lojas.produtos (produto_id)
@@ -198,7 +198,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK loja_id em envios 
+-- Criação do relacionamento com a FK loja_id em envios 
 ALTER TABLE lojas.envios ADD CONSTRAINT lojas_envios_fk
 FOREIGN KEY (loja_id)
 REFERENCES lojas.lojas (loja_id)
@@ -206,7 +206,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK loja_id em pedidos
+-- Criação do relacionamento com a FK loja_id em pedidos
 ALTER TABLE lojas.pedidos ADD CONSTRAINT lojas_pedidos_fk
 FOREIGN KEY (loja_id)
 REFERENCES lojas.lojas (loja_id)
@@ -214,7 +214,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK loja_id em estoques
+-- Criação do relacionamento com a FK loja_id em estoques
 ALTER TABLE lojas.estoques ADD CONSTRAINT lojas_estoques_fk
 FOREIGN KEY (loja_id)
 REFERENCES lojas.lojas (loja_id)
@@ -222,7 +222,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK cliente_id em envios
+-- Criação do relacionamento com a FK cliente_id em envios
 ALTER TABLE lojas.envios ADD CONSTRAINT clientes_envios_fk
 FOREIGN KEY (cliente_id)
 REFERENCES lojas.clientes (cliente_id)
@@ -230,7 +230,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK cliente_id em pedidos
+-- Criação do relacionamento com a FK cliente_id em pedidos
 ALTER TABLE lojas.pedidos ADD CONSTRAINT clientes_pedidos_fk
 FOREIGN KEY (cliente_id)
 REFERENCES lojas.clientes (cliente_id)
@@ -238,7 +238,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK pedido_id em pedidos_itens
+-- Criação do relacionamento com a FK pedido_id em pedidos_itens
 ALTER TABLE lojas.pedidos_itens ADD CONSTRAINT pedidos_pedidos_itens_fk
 FOREIGN KEY (pedido_id)
 REFERENCES lojas.pedidos (pedido_id)
@@ -246,7 +246,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
--- Criando relacionamento com a FK envio_id em pedidos_itens
+-- Criação do relacionamento com a FK envio_id em pedidos_itens
 ALTER TABLE lojas.pedidos_itens ADD CONSTRAINT envios_pedidos_itens_fk
 FOREIGN KEY (envio_id)
 REFERENCES lojas.envios (envio_id)
@@ -255,37 +255,37 @@ ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
 
--- Adicionando a restrição na coluna status da tabela pedidos
+-- Adiciona a restrição na coluna status da tabela pedidos
 ALTER TABLE lojas.pedidos
 ADD CONSTRAINT check_status
 CHECK (status IN ('CANCELADO', 'COMPLETO', 'ABERTO', 'PAGO', 'REEMBOLSADO', 'ENVIADO'));
 
--- Adicionando a restrição na coluna status da tabela envios
+-- Adiciona a restrição na coluna status da tabela envios
 ALTER TABLE lojas.envios
 ADD CONSTRAINT check_status
 CHECK (status IN ('CRIADO', 'ENVIADO', 'TRANSITO', 'ENTREGUE'));
 
--- Adicionando a restrição na coluna preco_unitario da tabela produtos
+-- Adiciona a restrição na coluna preco_unitario da tabela produtos
 ALTER TABLE lojas.produtos
 ADD CONSTRAINT check_preco_unitario_positivo
 CHECK (preco_unitario >= 0);
 
--- Adicionando a restrição na coluna preco_unitario da tabela pedidos_itens
+-- Adiciona a restrição na coluna preco_unitario da tabela pedidos_itens
 ALTER TABLE lojas.pedidos_itens
 ADD CONSTRAINT check_preco_unitario_positivo
 CHECK (preco_unitario >= 0);
 
--- Adicionando a restrição na coluna quantidade da tabela pedidos_itens
+-- Adiciona a restrição na coluna quantidade da tabela pedidos_itens
 ALTER TABLE lojas.pedidos_itens
 ADD CONSTRAINT check_quantidade_positivo
 CHECK (quantidade >= 0);
 
--- Adicionando a restrição na coluna quantidade da tabela estoques
+-- Adiciona a restrição na coluna quantidade da tabela estoques
 ALTER TABLE lojas.estoques
 ADD CONSTRAINT check_quantidade_positivo
 CHECK (quantidade >= 0);
 
--- Adicionando a restrição nas colunas endereco_web e endereco_fisico da tabela lojas
+-- Adiciona a restrição nas colunas endereco_web e endereco_fisico da tabela lojas
 ALTER TABLE lojas.lojas
 ADD CONSTRAINT check_endereco_preenchido
 CHECK (endereco_web IS NOT NULL OR endereco_fisico IS NOT NULL);
