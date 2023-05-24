@@ -1,3 +1,9 @@
+-- Exclui o banco de dados uvv caso exista
+DROP DATABASE IF EXISTS uvv;
+
+-- Exclui o usuario Pedro_Cravo caso exista
+DROP USER IF EXISTS Pedro_Cravo;
+
 -- Criação do usuário Pedro_Cravo
 CREATE USER Pedro_Cravo WITH PASSWORD 'senha' CREATEDB CREATEROLE;
 
@@ -11,7 +17,7 @@ CREATE DATABASE uvv
   CONNECTION LIMIT = -1;
 
 -- Conexão com o banco de dados uvv
-\c uvv
+\c "host=localhost dbname=uvv user=Pedro_Cravo password='senha'"
 
 -- Criação do schema lojas
 CREATE SCHEMA lojas;
