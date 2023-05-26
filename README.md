@@ -1,7 +1,7 @@
 # PSET1
 ## Turma: cc1ma
 ## Aluno: Pedro Henrique Souza Cravo
-## Matrícula 202305475
+## Matrícula: 202305475
 ## Professor: Abrantes Araujo Silva Filho
 
 ## O que é um Pset?
