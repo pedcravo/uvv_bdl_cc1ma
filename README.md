@@ -1,7 +1,12 @@
 # PSET1
 ## Turma: cc1ma
-## Aluno: Pedro Henrique Souza Cravo 202305475
-## Professor: Abrantes Araujo
+## Aluno: Pedro Henrique Souza Cravo
+## Matrícula 202305475
+## Professor: Abrantes Araujo Silva Filho
+
+## O que é um Pset?
+Um Problem Set (PSET) é um conjunto de problemas e tarefas difíceis (alguns extremamente difíceis) que o forçarão a estudar e realmente compreender a ma- téria.
+Esse PSET foi criado pelo prof Abrantes como trabalho para a matéria Banco de Dados.
 
 ## Detalhes do PSET (projeto lógico)
 - Criação das tabelas juntamente com os comentáios
